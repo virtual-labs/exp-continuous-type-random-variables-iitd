@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   
+<head>
+    <meta charset="utf-8">
+    <title>
+        PMF
+    </title>
+    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Exo:ital@1&display=swap" rel="stylesheet">
+    
+      <style>
+    input[type=text] {
+      width: 300px;
+    }
+    input {
+      padding: 6px;
+    }
+    body{ display: flex;
+          flex-direction: column;
+          justify-content: center;
+        	font-size: 100%;
+        	background-color: rgba(230, 230, 240, 0.8);
+	        font-family: Arial, Helvetica, sans-serif;
+	        width: 960px;
+	        margin: auto;
+    }
+     html {
+      font-family: sans-serif;
+      font-size: 11pt;
+    }
+    input{
+      font-family: sans-serif;
+      font-size: 11pt;
+      font-size: medium;
+	    border: 1px solid rgb(150, 150, 150);
+	    border-radius: 2px;
+	    padding: 5px;
+	    background-color: rgb(240, 240, 240);
+    	margin: 2px 0px 0 0;
+	    width: 60 px;
+      color: black;
+    }
+    input[value="Draw"]{
+      width:60px;
+    }
+    form {
+      margin: 20px 0;
+      color: aliceblue;
+      font-family: 'Rokkitt', serif;
+      font-size: large;
+    }
+    #distribution{
+      color:black;
+    }
+  </style>
+</head>
+   
+<body>
+  <div class="form-group" style="border: 0.5px solid rgb(98, 98, 98);
+            align-self: center;
+            border-radius: 16px;
+            background: #37474F;
+            margin: 10px;
+            padding: 30px;
+            height: fit-content;
+            width: 600px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);">
+                <form id = "info" autocomplete="off">
+                  <label for="distribution">Choose a distribution:</label>
+                  <select id="distribution" onchange="change()">
+                    <option value="" disabled selected> -- Select a distribution -- </option>
+                          <option value="pdf">Moment_PDF </option>
+                          <option value="pmf">Moment_PMF </option>
+                  </select>
+                  
+                </form>
+                <script src="./changeFile.js"></script>
+
+       <div style="
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               margin-bottom: 2em;
+               color: aliceblue;
+               ">
+           <h1 style="font-family: 'Rokkitt', serif;">Moments PDF</h1>
+       </div>
+<form>
+   <h1>Please enter data</h1>
+   <p>Data should NOT be in fractions</p>
+   <p> Upper limit of x is 10000</p>
+   <p> P(X = x) ≥ 0</p>
+   <br>
+      <label for="Xs">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</label> 
+       <input id="Xs" type="text">
+       <br>
+       <br>
+     <label for="Ys">P(X = x)</label>
+   <input id="Ys" type="text">
+   <br>   
+   <br>
+  <input type="button" value="Save" onclick="savedata()">
+   <input type="button" value="Show data" onclick="GenerateTable()">
+   <input type="button" value="Draw" onclick="draw()">
+
+  <div id="dvTable"></div>
+</form>
+<div id="display"></div>
+ 
+ <div id="plot2"></div>
+ 
+
+  </div>
+<script>
+var arrX=new Array();
+var arrY=new Array();
+var outputText;
+ 
+function savedata(){
+    var xs = document.getElementById('Xs').value;
+    var ys = document.getElementById('Ys').value;
+    
+    arrX[arrX.length]=xs;    
+    arrY[arrY.length]=ys;
+    
+  }
+
+function draw(){
+    const k = arrY.length;
+    var sum = 0;
+    let bool = false;
+    for (let i = 0; i < k; i++){
+        if (Number(arrY[i]) < 0){
+            bool = true;
+        }
+        sum += Number(arrY[i]);
+    }
+    if (sum > 1 || bool){
+        document.getElementById('display').innerHTML = "INVALID DATA";
+    }
+    else{
+        const w = Array(k).fill(0.01);
+        const trace1 = {
+            mode: 'markers',
+            type: 'scatter',
+            x: arrX,
+            y: arrY
+        }
+        const trace2 = {
+            x: arrX,
+            y: arrY,
+            width: w,
+            type: 'bar'
+        }
+        const layout = {
+            xaxis: {
+                title: 'x'
+            },
+            yaxis: {
+                title: 'P(X = x)'
+            }
+        }
+        layout.yaxis.showline = true
+        const data2 = [trace2, trace1]
+    
+        Plotly.newPlot('plot2', data2, layout)
+    }
+       
+}  
+ 
+function GenerateTable() {
+        //Build an array containing Customer records.
+    var customers = new Array();
+    customers.push(["x", "P(X = x)" ]);
+    for (let i = 0; i < arrY.length; i++){
+      customers.push([arrX[i], arrY[i]]);
+    }
+        
+ 
+        //Create a HTML Table element.
+    var table = document.createElement("TABLE");
+    table.border = "1";
+ 
+        //Get the count of columns.
+    var columnCount = customers[0].length;
+ 
+        //Add the header row.
+    var row = table.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("TH");
+        headerCell.innerHTML = customers[0][i];
+        row.appendChild(headerCell);
+    }
+ 
+    //Add the data rows.
+    for (var i = 1; i < customers.length; i++) {
+        row = table.insertRow(-1);
+        for (var j = 0; j < columnCount; j++) {
+            var cell = row.insertCell(-1);
+            cell.innerHTML = customers[i][j];
+        }
+    }
+ 
+    var dvTable = document.getElementById("dvTable");
+    dvTable.innerHTML = "";
+    dvTable.appendChild(table);
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
