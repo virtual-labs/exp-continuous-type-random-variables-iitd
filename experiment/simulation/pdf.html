@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>math.js | plot</title>
-  <script src="https://unpkg.com/mathjs@10.6.1/lib/browser/math.js"></script>
+    <meta charset="utf-8">
+    <title>math.js | plot</title>
+    <script src="https://unpkg.com/mathjs@10.6.1/lib/browser/math.js"></script>
 
-  <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Exo:ital@1&display=swap" rel="stylesheet">
-  
-  <style>
-    input[type=text] {
-      width: 300px;
-    }
-    input {
-      padding: 6px;
-    }
-    body{ display: flex;
-          flex-direction: column;
-          justify-content: center;
-        	font-size: 100%;
-        	background-color: rgba(230, 230, 240, 0.8);
-	        font-family: Arial, Helvetica, sans-serif;
-	        width: 960px;
-	        margin: auto;
-    }
-    body, html, input {
-      font-family: sans-serif;
-      font-size: 11pt;
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital@1&display=swap" rel="stylesheet">
 
-    }
-    input{
-      font-family: sans-serif;
-      font-size: 11pt;
-      font-size: medium;
-	    border: 1px solid rgb(150, 150, 150);
-	    border-radius: 2px;
-	    padding: 5px;
-	    background-color: rgb(240, 240, 240);
-    	margin: 2px 0px 0 0;
-	    width: 60 px;
-      color: black;
-    }
-    input[value="Draw"]{
-      width:60px;
-    }
-    form {
-      margin: 20px 0;
-      color: aliceblue;
-      font-family: 'Rokkitt', serif;
-      font-size: large;
-    }
-    #distribution{
-      color:black;
-    }
-  </style>
+    <style>
+        input[type=text] {
+            width: 300px;
+        }
+        
+        input {
+            padding: 6px;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 100%;
+            background-color: rgba(230, 230, 240, 0.8);
+            font-family: Arial, Helvetica, sans-serif;
+            width: 960px;
+            margin: auto;
+        }
+        
+        body,
+        html,
+        input {
+            font-family: sans-serif;
+            font-size: 11pt;
+        }
+        
+        input {
+            font-family: sans-serif;
+            font-size: 11pt;
+            font-size: medium;
+            border: 1px solid rgb(150, 150, 150);
+            border-radius: 2px;
+            padding: 5px;
+            background-color: rgb(240, 240, 240);
+            margin: 2px 0px 0 0;
+            width: 60 px;
+            color: black;
+        }
+        
+        input[value="Draw"] {
+            width: 60px;
+        }
+        
+        form {
+            margin: 20px 0;
+            color: aliceblue;
+            font-family: 'Rokkitt', serif;
+            font-size: large;
+        }
+        
+        #distribution {
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="form-group" style="border: 0.5px solid rgb(98, 98, 98);
+    <div class="form-group" style="border: 0.5px solid rgb(98, 98, 98);
             align-self: center;
             border-radius: 16px;
             background: #37474F;
@@ -75,18 +86,18 @@
             height: fit-content;
             width: 600px;
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);">
-                <form id = "info" autocomplete="off">
-                  <label for="distribution">Choose a distribution:</label>
-                  <select id="distribution" onchange="change()">
+        <form id="info" autocomplete="off">
+            <label for="distribution">Choose a distribution:</label>
+            <select id="distribution" onchange="change()">
                     <option value="" disabled selected> -- Select a distribution -- </option>
-                          <option value="pdf">Moment_PDF </option>
-                          <option value="pmf">Moment_PMF </option>
+                          <option value="pdf">Continuous Random Variable </option>
+                          <option value="pmf">Discrete Random Variable </option>
                   </select>
-                  
-                </form>
-                <script src="./changeFile.js"></script>
 
-       <div style="
+        </form>
+        <script src="./changeFile.js"></script>
+
+        <div style="
                display: flex;
                justify-content: center;
                align-items: center;
@@ -94,100 +105,100 @@
                margin-bottom: 2em;
                color: aliceblue;
                ">
-           <h1 style="font-family: 'Rokkitt', serif;">Moments PDF</h1>
-       </div>
-<form id="form">
-  <p> This plot is only applicable for polynomials</p>
-  <p> Upper limit of x is 10000</p>
-  <p> P(X = x) ≥ 0</p>
+            <h1 style="font-family: 'Rokkitt', serif;">Continuous Random Variable</h1>
+        </div>
+        <form id="form">
+            <p> This plot is only applicable for polynomials</p>
+            <p> Upper limit of x is 10000</p>
+            <p> P(X = x) ≥ 0</p>
 
-  <label for="eq">Enter PDF :</label>
-  <input type="text" id="eq" value="6*x*(1-x)" />
-  <br>
-  <br>
-  
-  <input type="number" id="slower" value="0" class="inlonger" style="text-align: left;" onkeyup="iptfieldCheck(this, 'r', 'i');"> 
-  <label> ≤ x  ≤ </label>
-  <input type="number" id="supper" value="1" class="inlonger" style="text-align: left;" onkeyup="iptfieldCheck(this, 'r', 'i');">
-  <input type="submit" value="Draw" />
+            <label for="eq">Enter PDF :</label>
+            <input type="text" id="eq" />
+            <br>
+            <br>
 
-</form>
+            <input type="number" id="slower" class="inlonger" style="text-align: left;" onkeyup="iptfieldCheck(this, 'r', 'i');">
+            <label> ≤ x  ≤ </label>
+            <input type="number" id="supper" class="inlonger" style="text-align: left;" onkeyup="iptfieldCheck(this, 'r', 'i');">
+            <input type="submit" value="Draw" />
+        </form>
 
 
-  </div> 
 
-<div id="plot"></div>
+    </div>
 
-<p>
-  Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
-</p>
+    <div id="plot"></div>
 
-<script>
-  function draw() {
-    try {
-      // compile the expression once
-      const expression = document.getElementById('eq').value
-      
-      const min = document.getElementById('slower').value 
-      const max = document.getElementById('supper').value 
-      const expr = math.compile(expression)
+    <!-- <p>
+        Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
+    </p> -->
 
-      //const range = document.getElementByAction('vol').max
+    <script>
+        function draw() {
+            try {
+                // compile the expression once
+                const expression = document.getElementById('eq').value
 
-      // evaluate the expression repeatedly for different values of x
-      const xValues = math.range(min, max, 0.001).toArray()
-      const yValues = xValues.map(function (x) {
-        return expr.evaluate({x: x})
-      })
+                const min = document.getElementById('slower').value
+                const max = document.getElementById('supper').value
+                const expr = math.compile(expression)
 
-      let bool = false;
-      let sum = 0;
-      for(let i = 0; i < yValues.length; i++){
-        if(yValues[i] < 0){
-          bool = true;
+                //const range = document.getElementByAction('vol').max
+
+                // evaluate the expression repeatedly for different values of x
+                const xValues = math.range(min, max, 0.001).toArray()
+                const yValues = xValues.map(function(x) {
+                    return expr.evaluate({
+                        x: x
+                    })
+                })
+
+                let bool = false;
+                let sum = 0;
+                for (let i = 0; i < yValues.length; i++) {
+                    if (yValues[i] < 0) {
+                        bool = true;
+                    }
+                    sum += yValues[i] * 0.001;
+                }
+
+                if (sum > 1 || sum < 0.99) {
+                    bool = true;
+                }
+                if (bool) {
+                    throw ("Please enter the correct data");
+                }
+                // render the plot using plotly
+                const trace1 = {
+                    x: xValues,
+                    y: yValues,
+                    type: 'scatter'
+                }
+                const layout = {
+                    xaxis: {
+                        title: 'x'
+                    },
+                    yaxis: {
+                        title: 'P(X = x)'
+                    }
+                }
+                const data = [trace1]
+
+
+
+                Plotly.newPlot('plot', data, layout);
+            } catch (err) {
+                console.error(err)
+                alert(err)
+            }
         }
-        sum += yValues[i] * 0.001;
-      }
 
-      if(sum > 1 || sum < 0.99){
-        bool = true;
-      }
-      if (bool){
-        throw ("Please enter the correct data");
-      }
-      // render the plot using plotly
-      const trace1 = {
-        x: xValues,
-        y: yValues,
-        type: 'scatter'
-      }
-      const layout = {
-          xaxis: {
-              title: 'x'
-          },
-          yaxis: {
-              title: 'P(X = x)'
-          }
-      }
-      const data = [trace1]
-      
-      
-
-      Plotly.newPlot('plot', data, layout);
-    }
-    catch (err) {
-      console.error(err)
-      alert(err)
-    }
-  }
-
-  document.getElementById('form').onsubmit = function (event) {
-    event.preventDefault()
-    draw()
-  }
-
-  draw()
-</script>
+        document.getElementById('form').onsubmit = function(event) {
+            event.preventDefault()
+            draw()
+        }
+    </script>
 
 </body>
+
 </html>
