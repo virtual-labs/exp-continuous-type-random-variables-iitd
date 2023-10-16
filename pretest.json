@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is a Probability Mass Function (PMF) used for in the context of discrete random variables?",
+      "answers": {
+        "a": "To calculate cumulative probabilities ",
+        "b": "To determine the range of possible values",
+        "c": "To represent probabilities of individual outcomes",
+        "d": "To find the average value of the random variable"
+      },
+      "explanations": {
+        "a": "PMF is used to represent probabilities of individual outcomes for discrete random variables. It provides the probability that a discrete random variable takes on a specific value.",
+        "b": "PMF is used to represent probabilities of individual outcomes for discrete random variables. It provides the probability that a discrete random variable takes on a specific value.",
+        "c": "PMF is used to represent probabilities of individual outcomes for discrete random variables. It provides the probability that a discrete random variable takes on a specific value.",
+        "d": "PMF is used to represent probabilities of individual outcomes for discrete random variables. It provides the probability that a discrete random variable takes on a specific value."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following statements about continuous random variables is correct?",
+      "answers": {
+        "a": "They can only take on integer values ",
+        "b": "They have probability mass functions",
+        "c": "The probability of any specific value is zero",
+        "d": "They always have a finite number of possible outcomes"
+      },
+      "explanations": {
+        "a": "Continuous random variables have an infinite number of possible values, so the probability of any specific value is zero.",
+        "b": "Continuous random variables have an infinite number of possible values, so the probability of any specific value is zero.",
+        "c": "Continuous random variables have an infinite number of possible values, so the probability of any specific value is zero.",
+        "d": "Continuous random variables have an infinite number of possible values, so the probability of any specific value is zero."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+      {
+      "question": "What does the area under the Probability Density Function (PDF) curve represent for continuous random variables?",
+      "answers": {
+        "a": "Mean of the random variable",
+        "b": "Median of the random variable",
+        "c": "Variance of the random variable",
+        "d": "Probability that the random variable falls within a certain range "
+      },
+      "explanations": {
+        "a": "The area under the PDF curve represents the probability that the continuous random variable falls within a certain range.",
+        "b": "The area under the PDF curve represents the probability that the continuous random variable falls within a certain range.",
+        "c": "The area under the PDF curve represents the probability that the continuous random variable falls within a certain range.",
+        "d": "The area under the PDF curve represents the probability that the continuous random variable falls within a certain range."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+      {
+      "question": "For a discrete random variable, which of the following must always be true?",
+      "answers": {
+        "a": "The PMF values must sum up to 1",
+        "b": "The PMF values must be negative",
+        "c": "The PMF values must be integers",
+        "d": "The PMF values must be greater than 1"
+      },
+      "explanations": {
+        "a": " The sum of the PMF values for all possible outcomes must be equal to 1.",
+        "b": " The sum of the PMF values for all possible outcomes must be equal to 1.",
+        "c": " The sum of the PMF values for all possible outcomes must be equal to 1.",
+        "d": " The sum of the PMF values for all possible outcomes must be equal to 1."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+      {
+      "question": "Which graphical representation is commonly used to represent the PMF of a discrete random variable?",
+      "answers": {
+        "a": " Histogram ",
+        "b": "Line chart",
+        "c": "Pie chart",
+        "d": "Scatter plot"
+      },
+      "explanations": {
+        "a": "A histogram is commonly used to represent the PMF of a discrete random variable, where the bars represent the probabilities of different outcomes.",
+        "b": "A histogram is commonly used to represent the PMF of a discrete random variable, where the bars represent the probabilities of different outcomes.",
+        "c": "A histogram is commonly used to represent the PMF of a discrete random variable, where the bars represent the probabilities of different outcomes.",
+        "d": "A histogram is commonly used to represent the PMF of a discrete random variable, where the bars represent the probabilities of different outcomes."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
