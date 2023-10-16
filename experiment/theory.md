@@ -1,1 +1,2 @@
-### Link your theory in here
+<img src="images/discrete1.png"/>
+<img src="images/discrete2.png"/>
