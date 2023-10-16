@@ -1,1 +1,1 @@
-### Aim of the experiment
+The aim of this experiment is to investigate the probability distributions of discrete and continuous random variables. Specifically, the focus is on calculating probabilities associated with discrete and continuous random variables and understanding the graphical representation of Probability Mass Functions and Probability Density Functions. 
