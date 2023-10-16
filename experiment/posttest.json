@@ -78,4 +78,15 @@
         "d": "0.1755"
       },
       "explanations": {
-        "a": "Correct! In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = (125e^
+        "a": "Correct! In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008.",
+        "b": "Correct! In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008.",
+        "c": "Correct! In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008.",
+        "d": "Correct! In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008." 
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+
+}
+    ]
+}
+
