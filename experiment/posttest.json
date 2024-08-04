@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The expected value of a discrete random variable Z is 3. If Z can take values 1, 2, 4, and 5, what is the probability of Z being equal to 4?",
+      "question": "The expected value of a discrete random variable Z is 3. If Z has distribution function P(Z = 1)=0, P(Z = 2)=p1, P(Z = 4)=p2, P(Z = 5) = 0. what is the probability of Z being equal to 4?",
       "answers": {
         "a": "0.25",
         "b": "0.2",
