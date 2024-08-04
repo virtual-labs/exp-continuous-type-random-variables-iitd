@@ -1,0 +1,1 @@
+This experiment aims to investigate the probability distributions of discrete and continuous random variables. Specifically, the focus is on understanding the graphical representation of Probability Mass Functions and Probability Density Functions. 
