@@ -1,1 +1,1 @@
-## Experiment name
+## Discrete and Continuous Type Random Variables

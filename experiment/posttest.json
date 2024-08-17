@@ -2,38 +2,91 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Consider a discrete random variable X with the following PMF:\n\nP(X = 1) = 0.3, P(X = 2) = 0.5, P(X = 3) = 0.2.\n\nCalculate the variance of the random variable X.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "0.3",
+        "b": "0.25",
+        "c": "0.15",
+        "d": "0.35"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": " To calculate the variance of a discrete random variable X, you can use the formula: Var(X) = ∑(xi - μ)² * P(X = xi), where xi represents each possible value of X, μ is the mean of X, and P(X = xi) is the probability of X taking the value xi. In this case, μ = 1 * 0.3 + 2 * 0.5 + 3 * 0.2 = 2, and Var(X) = (1 - 2)² * 0.3 + (2 - 2)² * 0.5 + (3 - 2)² * 0.2 = 0.35.",
+        "b": " To calculate the variance of a discrete random variable X, you can use the formula: Var(X) = ∑(xi - μ)² * P(X = xi), where xi represents each possible value of X, μ is the mean of X, and P(X = xi) is the probability of X taking the value xi. In this case, μ = 1 * 0.3 + 2 * 0.5 + 3 * 0.2 = 2, and Var(X) = (1 - 2)² * 0.3 + (2 - 2)² * 0.5 + (3 - 2)² * 0.2 = 0.35.",
+        "c": " To calculate the variance of a discrete random variable X, you can use the formula: Var(X) = ∑(xi - μ)² * P(X = xi), where xi represents each possible value of X, μ is the mean of X, and P(X = xi) is the probability of X taking the value xi. In this case, μ = 1 * 0.3 + 2 * 0.5 + 3 * 0.2 = 2, and Var(X) = (1 - 2)² * 0.3 + (2 - 2)² * 0.5 + (3 - 2)² * 0.2 = 0.35.",
+        "d": " To calculate the variance of a discrete random variable X, you can use the formula: Var(X) = ∑(xi - μ)² * P(X = xi), where xi represents each possible value of X, μ is the mean of X, and P(X = xi) is the probability of X taking the value xi. In this case, μ = 1 * 0.3 + 2 * 0.5 + 3 * 0.2 = 2, and Var(X) = (1 - 2)² * 0.3 + (2 - 2)² * 0.5 + (3 - 2)² * 0.2 = 0.35."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A continuous random variable Y follows a uniform distribution between 0 and 10. Calculate the probability that Y is between 2 and 6.",
+      "answers": {
+        "a": "0.4",
+        "b": "0.5",
+        "c": "0.6",
+        "d": "0.2"
+      },
+      "explanations": {
+        "a": " For a uniform distribution between a and b, the probability density function (PDF) is constant within this range. The total probability is the area under the PDF curve, which is the height (constant value) multiplied by the width (b - a). In this case, the width is 10 - 0 = 10, and the height is 1/10 (to maintain the total area as 1). So, the probability of Y being between 2 and 6 is: P(2 ≤ Y ≤ 6) = Height * Width = (1/10) * 4 = 0.4.",
+        "b": " For a uniform distribution between a and b, the probability density function (PDF) is constant within this range. The total probability is the area under the PDF curve, which is the height (constant value) multiplied by the width (b - a). In this case, the width is 10 - 0 = 10, and the height is 1/10 (to maintain the total area as 1). So, the probability of Y being between 2 and 6 is: P(2 ≤ Y ≤ 6) = Height * Width = (1/10) * 4 = 0.4.",
+        "c": " For a uniform distribution between a and b, the probability density function (PDF) is constant within this range. The total probability is the area under the PDF curve, which is the height (constant value) multiplied by the width (b - a). In this case, the width is 10 - 0 = 10, and the height is 1/10 (to maintain the total area as 1). So, the probability of Y being between 2 and 6 is: P(2 ≤ Y ≤ 6) = Height * Width = (1/10) * 4 = 0.4.",
+        "d": " For a uniform distribution between a and b, the probability density function (PDF) is constant within this range. The total probability is the area under the PDF curve, which is the height (constant value) multiplied by the width (b - a). In this case, the width is 10 - 0 = 10, and the height is 1/10 (to maintain the total area as 1). So, the probability of Y being between 2 and 6 is: P(2 ≤ Y ≤ 6) = Height * Width = (1/10) * 4 = 0.4."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The expected value of a discrete random variable Z is 3. If Z has distribution function P(Z = 1)=0, P(Z = 2)=p1, P(Z = 4)=p2, P(Z = 5) = 0. what is the probability of Z being equal to 4?",
+      "answers": {
+        "a": "0.25",
+        "b": "0.2",
+        "c": "0.3",
+        "d": "0.15"
+      },
+      "explanations": {
+        "a": " The expected value (μ) is calculated as the sum of each possible value multiplied by its probability: μ = 1 * P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Given μ = 3, we can substitute the other known values and solve for P(Z = 4): 3 = P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Since P(Z = 1) + P(Z = 2) + P(Z = 4) + P(Z = 5) = 1, and P(Z = 1) = P(Z = 5) = 0, we have: P(Z = 4) = (3 - 2 * P(Z = 2)) / 4 = 0.25.",
+        "b": " The expected value (μ) is calculated as the sum of each possible value multiplied by its probability: μ = 1 * P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Given μ = 3, we can substitute the other known values and solve for P(Z = 4): 3 = P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Since P(Z = 1) + P(Z = 2) + P(Z = 4) + P(Z = 5) = 1, and P(Z = 1) = P(Z = 5) = 0, we have: P(Z = 4) = (3 - 2 * P(Z = 2)) / 4 = 0.25.",
+        "c": " The expected value (μ) is calculated as the sum of each possible value multiplied by its probability: μ = 1 * P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Given μ = 3, we can substitute the other known values and solve for P(Z = 4): 3 = P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Since P(Z = 1) + P(Z = 2) + P(Z = 4) + P(Z = 5) = 1, and P(Z = 1) = P(Z = 5) = 0, we have: P(Z = 4) = (3 - 2 * P(Z = 2)) / 4 = 0.25.",
+        "d": " The expected value (μ) is calculated as the sum of each possible value multiplied by its probability: μ = 1 * P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Given μ = 3, we can substitute the other known values and solve for P(Z = 4): 3 = P(Z = 1) + 2 * P(Z = 2) + 4 * P(Z = 4) + 5 * P(Z = 5). Since P(Z = 1) + P(Z = 2) + P(Z = 4) + P(Z = 5) = 1, and P(Z = 1) = P(Z = 5) = 0, we have: P(Z = 4) = (3 - 2 * P(Z = 2)) / 4 = 0.25."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Let W be a continuous random variable with a normal distribution having a mean of 50 and a standard deviation of 10. What is the probability that W is less than 45?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "0.1587",
+        "b": "0.3085",
+        "c": "0.8413",
+        "d": "0.6915"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": " To find the probability that W is less than 45 in a standard normal distribution (Z), we need to calculate the z-score: Z = (X - μ) / σ = (45 - 50) / 10 = -0.5. Using a standard normal table or a calculator, we find that the area to the left of Z = -0.5 is approximately 0.1587.",
+        "b": " To find the probability that W is less than 45 in a standard normal distribution (Z), we need to calculate the z-score: Z = (X - μ) / σ = (45 - 50) / 10 = -0.5. Using a standard normal table or a calculator, we find that the area to the left of Z = -0.5 is approximately 0.1587..",
+        "c": " To find the probability that W is less than 45 in a standard normal distribution (Z), we need to calculate the z-score: Z = (X - μ) / σ = (45 - 50) / 10 = -0.5. Using a standard normal table or a calculator, we find that the area to the left of Z = -0.5 is approximately 0.1587.",
+        "d": " To find the probability that W is less than 45 in a standard normal distribution (Z), we need to calculate the z-score: Z = (X - μ) / σ = (45 - 50) / 10 = -0.5. Using a standard normal table or a calculator, we find that the area to the left of Z = -0.5 is approximately 0.1587."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
-    }
-  ]
+    },
+    {
+      "question": "A Poisson-distributed random variable X represents the number of emails received per hour, with an average rate of 5 emails per hour. What is the probability of receiving exactly 3 emails in a given hour?",
+      "answers": {
+        "a": "0.1008",
+        "b": "0.1506",
+        "c": "0.0613",
+        "d": "0.1755"
+      },
+      "explanations": {
+        "a": " In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008.",
+        "b": " In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008.",
+        "c": " In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008.",
+        "d": " In a Poisson distribution, the probability of receiving k events in an interval is given by the formula: P(X = k) = (e^(-λ) * λ^k) / k!, where λ is the average rate. In this case, λ = 5 and k = 3. Substituting the values: P(X = 3) = (e^(-5) * 5^3) / 3! = 0.1008." 
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+
 }
+    ]
+}
+
